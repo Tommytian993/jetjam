@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=4 uid="uid://eojuotl74se6"]
+[gd_scene load_steps=174 format=4 uid="uid://eojuotl74se6"]
 
 [ext_resource type="Texture2D" uid="uid://dfcy863aubi4g" path="res://Sprites/Tiles/tile_0036.png" id="1_52a0j"]
 [ext_resource type="Texture2D" uid="uid://dkrojxvq1tnit" path="res://Sprites/Tiles/tile_0037.png" id="2_mx20r"]
@@ -85,6 +85,7 @@
 [ext_resource type="Texture2D" uid="uid://ix137nvyuw77" path="res://Sprites/Tiles/tile_0119.png" id="83_1tb4x"]
 [ext_resource type="Texture2D" uid="uid://drmocetg1qt3c" path="res://Sprites/Tiles/tile_0045.png" id="84_7j6ax"]
 [ext_resource type="Texture2D" uid="uid://de7w1v2bg6jao" path="res://Sprites/Clouds/Cloud1.png" id="85_mx20r"]
+[ext_resource type="Script" uid="uid://dlpodnkeqm82o" path="res://Scripts/Cloud.gd" id="86_rpc3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0rgc5"]
 texture = ExtResource("1_52a0j")
@@ -535,3 +536,4 @@ modulate = Color(1, 1, 1, 0.392157)
 z_index = 1
 position = Vector2(-244, -49)
 texture = ExtResource("85_mx20r")
+script = ExtResource("86_rpc3w")

@@ -555,6 +555,7 @@ texture = SubResource("GradientTexture1D_mx20r")
 [node name="Network" type="Node" parent="."]
 
 [node name="NetworkUI" type="Panel" parent="Network"]
+z_index = 100
 offset_left = -110.0
 offset_top = -99.0
 offset_right = 97.0
@@ -584,5 +585,5 @@ layout_mode = 2
 placeholder_text = "Port..."
 
 [node name="UsernameInput" type="LineEdit" parent="Network/NetworkUI/VBoxContainer"]
-layout_mode = 2 
+layout_mode = 2
 placeholder_text = "Type a username..."

@@ -15,6 +15,8 @@ var local_username: String
 func _ready() -> void:
 	# 准备就绪时连接UI信号
 	connect_ui_signals()
+	# 连接网络事件信号
+	connect_network_signals()
 
 # 连接按钮信号到网络功能
 func connect_ui_signals() -> void:
@@ -47,3 +49,32 @@ func _on_start_server_pressed() -> void:
 func _on_join_server_pressed() -> void:
 	local_username = username_input.text # 存储本地用户名
 	start_client() # 连接到服务器
+
+# 连接网络事件信号
+func connect_network_signals() -> void:
+	# 连接多人游戏信号
+	multiplayer.peer_connected.connect(_on_player_connected)
+	multiplayer.peer_disconnected.connect(_on_player_disconnected)
+	multiplayer.connected_to_server.connect(_connected_to_server)
+	multiplayer.connection_failed.connect(_connection_failed)
+	multiplayer.server_disconnected.connect(_server_disconnected)
+
+# 玩家连接事件处理
+func _on_player_connected(id: int) -> void:
+	print("玩家 %s 加入了游戏。" % id)
+
+# 玩家断开连接事件处理
+func _on_player_disconnected(id: int) -> void:
+	print("玩家 %s 离开了游戏。" % id)
+
+# 成功连接到服务器事件处理
+func _connected_to_server() -> void:
+	print("已连接到服务器。")
+
+# 连接失败事件处理
+func _connection_failed() -> void:
+	print("连接失败！")
+
+# 服务器断开连接事件处理
+func _server_disconnected() -> void:
+	print("服务器已断开连接。")

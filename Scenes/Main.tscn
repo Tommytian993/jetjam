@@ -1,4 +1,4 @@
-[gd_scene load_steps=175 format=4 uid="uid://eojuotl74se6"]
+[gd_scene load_steps=176 format=4 uid="uid://eojuotl74se6"]
 
 [ext_resource type="Texture2D" uid="uid://dfcy863aubi4g" path="res://Sprites/Tiles/tile_0036.png" id="1_52a0j"]
 [ext_resource type="Texture2D" uid="uid://dkrojxvq1tnit" path="res://Sprites/Tiles/tile_0037.png" id="2_mx20r"]
@@ -87,6 +87,7 @@
 [ext_resource type="Texture2D" uid="uid://de7w1v2bg6jao" path="res://Sprites/Clouds/Cloud1.png" id="85_mx20r"]
 [ext_resource type="Script" uid="uid://dlpodnkeqm82o" path="res://Scripts/Cloud.gd" id="86_rpc3w"]
 [ext_resource type="Texture2D" uid="uid://dr7tbn530fydj" path="res://Sprites/Clouds/Cloud_0.png" id="87_3k6d1"]
+[ext_resource type="Script" uid="uid://bpibv5d5fv5k8" path="res://Scripts/NetworkManager.gd" id="88_fq6d3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0rgc5"]
 texture = ExtResource("1_52a0j")
@@ -553,6 +554,7 @@ scale = Vector2(3.28125, 505)
 texture = SubResource("GradientTexture1D_mx20r")
 
 [node name="Network" type="Node" parent="."]
+script = ExtResource("88_fq6d3")
 
 [node name="NetworkUI" type="Panel" parent="Network"]
 z_index = 100

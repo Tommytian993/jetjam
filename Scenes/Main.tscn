@@ -580,10 +580,12 @@ text = "Join Server"
 
 [node name="IPInput" type="LineEdit" parent="Network/NetworkUI/VBoxContainer"]
 layout_mode = 2
+text = "localhost"
 placeholder_text = "IP Address..."
 
 [node name="PortInput" type="LineEdit" parent="Network/NetworkUI/VBoxContainer"]
 layout_mode = 2
+text = "8080"
 placeholder_text = "Port..."
 
 [node name="UsernameInput" type="LineEdit" parent="Network/NetworkUI/VBoxContainer"]
